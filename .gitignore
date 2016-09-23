@@ -1,2 +1,4 @@
 npm-debug.log.*
 node_modules/*
+src/server/node_modules/*
+src/client/dist/*
