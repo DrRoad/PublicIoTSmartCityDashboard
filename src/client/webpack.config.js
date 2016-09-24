@@ -60,8 +60,8 @@ var devPluginList = [
 ];
 
 var loaderList = [
-  { test: /\.png$/, loader: "url-loader?limit=10000" },
-  { test: /\.jpg$/, loader: "file-loader?limit=10000" },
+  { test: /\.png$/, loader: "url-loader?limit=10000&name=./../images/[hash].[ext]" },
+  { test: /\.jpg$/, loader: "file-loader?limit=10000&name=./../images/[hash].[ext]" },
   { test: /\.json$/, loader: 'json' },
   { test: /\.jsx?/, exclude: MODULES_DIR, loader: 'babel' },
   { test: /\.scss$/, loader: ExtractTextPlugin.extract('css!sass') },

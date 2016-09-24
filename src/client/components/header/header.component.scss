@@ -18,18 +18,33 @@
           align-content: space-between;
 
   > .left {
+    cursor: pointer;
+    padding-right: 16px;
+
+    display: -webkit-box;           /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;              /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;           /* TWEENER - IE 10 */
+    display: -webkit-flex;          /* NEW - Chrome */
+    display: flex;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    
+
     > .logo {
-      width: 48px;
+      width: 58px;
       padding: 6px;
       &:after {
         content: url(~images/pdw_thumbnail_48x48.png);
-        cursor: pointer;
       }
+    }
+
+    > .title {
+      font-size: $font-medium;
+      font-family: $font-narrow;
+      margin: auto;
+      color: $white-235;
     }
   }
 }

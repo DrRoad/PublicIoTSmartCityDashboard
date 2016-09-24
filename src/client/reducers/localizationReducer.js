@@ -2,7 +2,7 @@ export default function reducer(state={
   fetching: false,
   fetched: false,
   error: null,
-  localization: null,
+  localization: {},
 }, action) {
   switch (action.type) {
     case "FETCH_LOCALIZATION_PENDING": {

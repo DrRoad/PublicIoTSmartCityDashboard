@@ -8,7 +8,6 @@ export function fetchLocalization() {
   if (language.toLowerCase().includes("en")) {
     file = "en.json";
   }
-  console.log(location);
   return {
     type: "FETCH_LOCALIZATION",
     payload: axios.get(location.origin + serverConfig.uLocalization + file),
