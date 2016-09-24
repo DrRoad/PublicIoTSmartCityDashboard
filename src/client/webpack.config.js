@@ -6,7 +6,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 // var HistoryApiFallback = require('connect-history-api-fallback');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var APP_DIR = path.resolve(__dirname, './app');
+var COMPONENTS_DIR = path.resolve(__dirname, './components');
 var BUILD_DIR = path.resolve(__dirname, './dist');
 var LIBRARIES_DIR = path.resolve(__dirname, './libraries');
 var MODULES_DIR = path.resolve(__dirname, './node_modules');
@@ -30,7 +30,10 @@ var corePluginList = [
   // })
   // ,
   new CopyWebpackPlugin([
+    { from: path.join(__dirname, "./.htaccess"), to: BUILD_DIR },
     { from: path.join(__dirname, "./index.html"), to: path.join(BUILD_DIR, "./index.html") },
+    { from: path.join(__dirname, "./favicons/"), to: path.join(BUILD_DIR, "./favicons/") },
+    { from: path.join(__dirname, "./localizations/"), to: path.join(BUILD_DIR, "./localizations/") },
     // { from: SETTING_DIR, to: path.join(BUILD_DIR, "./setting/") },
     // { from: path.join(LIBRARIES_DIR, "./chart-core.js"), to: path.join(BUILD_DIR, "./js/chart-core.js") },
     // { from: path.join(LIBRARIES_DIR, "./chart-scatter.js"), to: path.join(BUILD_DIR, "./js/chart-scatter.js") },
@@ -49,7 +52,7 @@ var devPluginList = [
     port: process.env.PORT || 3000,
     open: false,
     server: {
-      baseDir: BUILD_DIR,
+      baseDir: BUILD_DIR
       // middleware: [ HistoryApiFallback() ]
     }
     // proxy: 'http://localhost'
@@ -60,7 +63,7 @@ var loaderList = [
   { test: /\.png$/, loader: "url-loader?limit=10000" },
   { test: /\.jpg$/, loader: "file-loader?limit=10000" },
   { test: /\.json$/, loader: 'json' },
-  { test: /\.jsx?/, include: APP_DIR, exclude: MODULES_DIR, loader: 'babel' },
+  { test: /\.jsx?/, exclude: MODULES_DIR, loader: 'babel' },
   { test: /\.scss$/, loader: ExtractTextPlugin.extract('css!sass') },
   { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff&name=./../font/[hash].[ext]" },
   { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff&name=./../font/[hash].[ext]" },
@@ -71,7 +74,7 @@ var loaderList = [
 
 var config = {
   entry: {
-    app: path.join(APP_DIR, "./app.js"),
+    app: path.join(COMPONENTS_DIR, "./index.js"),
     vendor: vendorList
   },
   output: {
