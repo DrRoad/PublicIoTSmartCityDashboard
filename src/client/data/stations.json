@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Station 1",
+    "coordinate": {
+      "latitude": 33.7756,
+      "longitude": 84.3963
+    },
+    "address": "North Avenue 121 NW"
+  },
+  {
+    "id": 2,
+    "name": "Station 2",
+    "coordinate": {
+      "latitude": 33.7756,
+      "longitude": 84.3963
+    },
+    "address": "North Avenue 122 NW"
+  },
+  {
+    "id": 3,
+    "name": "Station 3",
+    "coordinate": {
+      "latitude": 33.7756,
+      "longitude": 84.3963
+    },
+    "address": "North Avenue 123 NW"
+  },
+  {
+    "id": 4,
+    "name": "Station 4",
+    "coordinate": {
+      "latitude": 33.7756,
+      "longitude": 84.3963
+    },
+    "address": "North Avenue 124 NW"
+  },
+  {
+    "id": 5,
+    "name": "Station 5",
+    "coordinate": {
+      "latitude": 33.7756,
+      "longitude": 84.3963
+    },
+    "address": "North Avenue 125 NW"
+  }
+]

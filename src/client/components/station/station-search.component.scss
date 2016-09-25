@@ -1,0 +1,35 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixin.scss";
+
+.station-search {
+  padding: 8px;
+  color: $grey-50;
+
+  > .search-box {
+    display: -webkit-box;           /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;              /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;           /* TWEENER - IE 10 */
+    display: -webkit-flex;          /* NEW - Chrome */
+    display: flex;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+    -webkit-flex-direction: row;    /* Safari 6.1+ */
+            flex-direction: row;    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+    > input {
+      padding: 4px;
+      border: none;
+      -webkit-flex-grow: 1;           /* NEW - Chrome */
+              flex-grow: 1;           /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      &:focus {
+        outline: none;
+      }
+    }
+
+    > .fa, label {
+      margin-bottom: 0;
+      padding: 8px 8px 10px 8px;
+      background-color: $white-255;
+      cursor: pointer;
+    }
+  }
+}

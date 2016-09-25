@@ -1,4 +1,5 @@
 npm-debug.log.*
 node_modules/*
+!node_modules/font-awesome
 src/server/node_modules/*
 src/client/dist/*

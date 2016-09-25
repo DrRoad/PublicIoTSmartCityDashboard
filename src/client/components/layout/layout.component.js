@@ -18,7 +18,9 @@ export default class Layout extends React.Component {
   render() {
     return <div className="layout">
       <Header />
-      {this.props.children}
+      <div className="body">
+        {this.props.children}
+      </div>
     </div>;
   }
 }

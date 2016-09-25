@@ -12,6 +12,7 @@ import { fetchUser } from "../actions/userActions";
 import { fetchTweets } from "../actions/tweetsActions";
 
 import Layout from "./layout/layout.component";
+import Dashboard from "./dashboard/dashboard.component";
 
 import Temp from './temp';
 
@@ -50,7 +51,7 @@ require('./index.scss');
 ReactDom.render(<Provider store={store}>
     <Router history={hashHistory}>
       <Route path="/" component={Layout}>
-        <IndexRoute component={Temp} />
+        <IndexRoute component={Dashboard} />
         <Route path="temp" component={Temp} />
       </Route>
     </Router>

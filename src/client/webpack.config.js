@@ -34,6 +34,7 @@ var corePluginList = [
     { from: path.join(__dirname, "./index.html"), to: path.join(BUILD_DIR, "./index.html") },
     { from: path.join(__dirname, "./favicons/"), to: path.join(BUILD_DIR, "./favicons/") },
     { from: path.join(__dirname, "./localizations/"), to: path.join(BUILD_DIR, "./localizations/") },
+    { from: path.join(__dirname, "./data/"), to: path.join(BUILD_DIR, "./data/") },
     // { from: SETTING_DIR, to: path.join(BUILD_DIR, "./setting/") },
     // { from: path.join(LIBRARIES_DIR, "./chart-core.js"), to: path.join(BUILD_DIR, "./js/chart-core.js") },
     // { from: path.join(LIBRARIES_DIR, "./chart-scatter.js"), to: path.join(BUILD_DIR, "./js/chart-scatter.js") },
@@ -62,14 +63,13 @@ var devPluginList = [
 var loaderList = [
   { test: /\.png$/, loader: "url-loader?limit=10000&name=./../images/[hash].[ext]" },
   { test: /\.jpg$/, loader: "file-loader?limit=10000&name=./../images/[hash].[ext]" },
-  { test: /\.json$/, loader: 'json' },
   { test: /\.jsx?/, exclude: MODULES_DIR, loader: 'babel' },
   { test: /\.scss$/, loader: ExtractTextPlugin.extract('css!sass') },
-  { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff&name=./../font/[hash].[ext]" },
-  { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff&name=./../font/[hash].[ext]" },
-  { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream&name=./../font/[hash].[ext]" },
-  { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file?limit=10000&&name=./../font/[hash].[ext]" },
-  { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml&name=./../font/[hash].[ext]" }
+  { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff&name=./../fonts/[hash].[ext]" },
+  { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff&name=./../fonts/[hash].[ext]" },
+  { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream&name=./../fonts/[hash].[ext]" },
+  { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file?limit=10000&&name=./../fonts/[hash].[ext]" },
+  { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml&name=./../fonts/[hash].[ext]" }
 ];
 
 var config = {

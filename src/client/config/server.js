@@ -1,5 +1,6 @@
 let config = {
- "uLocalization": "/localizations/"
+ "uLocalization": "/localizations/",
+ "uData": "/data/",
 };
 
 export default config;

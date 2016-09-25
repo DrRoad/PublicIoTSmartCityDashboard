@@ -1,6 +1,10 @@
 @import "./../../scss/variables.scss";
+@import "./../../scss/mixin.scss";
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: $header-height;
   background-color: $grey-35;
@@ -42,9 +46,9 @@
 
     > .title {
       font-size: $font-medium;
-      font-family: $font-narrow;
+      font-family: $font-normal;
       margin: auto;
-      color: $white-235;
+      color: $white-215;
     }
   }
 }
