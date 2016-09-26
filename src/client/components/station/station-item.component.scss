@@ -1,0 +1,13 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixin.scss";
+
+.station-item {
+  margin: 0 8px;
+  padding: 4px 8px;
+  border-bottom: 1px solid $white-215;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $white-245;
+  }
+}

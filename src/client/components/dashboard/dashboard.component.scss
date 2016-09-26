@@ -30,7 +30,7 @@
       height: calc(100% - #{$header-height});
       position: absolute;
       top: $header-height;
-      left: calc(-100% + #{$header-height * 0.8});
+      left: calc(-100% + #{$left-menu-button-width});
     }
 
     > .content {
