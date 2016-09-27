@@ -16,17 +16,28 @@ require('./dashboard.component.scss');
 //   }
 // })
 export default class Dashboard extends React.Component {
+  componentWillMount() {
+    this.setState({open: false});
+  }
+  onToggle() {
+    this.setState({open: !this.state.open});
+  }
   render() {
-    // const { localization } = this.props;
+    let open = "";
+    let icon = <FontAwesome name='chevron-right' />;
+    if (this.state.open) {
+      open = " open";
+      icon = <FontAwesome name='chevron-left' />;
+    }
     return <div className="dashboard">
-      <div className="left">
+      <div className={"left" + open}>
         <div className="content">
           <StationSearch />
           <StationList />
         </div>
         <div className="toggle">
-          <div className="button">
-            <FontAwesome name='chevron-right' />
+          <div className="button" onClick={this.onToggle.bind(this)}>
+            {icon}
           </div>
         </div>
       </div>

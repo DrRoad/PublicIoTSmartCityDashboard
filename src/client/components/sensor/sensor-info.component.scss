@@ -2,11 +2,14 @@
 @import "./../../scss/mixin.scss";
 
 .sensor-info {
-  padding: 4px 8px;
   margin: 16px 0;
 
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+
+  > .title {
+    padding: 4px;
+  }
 }

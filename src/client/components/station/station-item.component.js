@@ -18,9 +18,7 @@ export default class StationItem extends React.Component {
     let icon;
     if (this.props.active) {
       active = " active";
-      icon = <div className="right">
-        <FontAwesome name='chevron-right' />
-      </div>;
+      icon = <FontAwesome name='chevron-right' />;
     }
     return <div className={"station-item" + active} onClick={this.selectStation.bind(this)}>
       <div className="left">
@@ -28,7 +26,9 @@ export default class StationItem extends React.Component {
         <div>{this.props.station.address}</div>
         <div>{"@ " + this.props.station.coordinate.latitude + ", " + this.props.station.coordinate.longitude}</div>
       </div>
-      {icon}
+      <div className="right">
+        {icon}
+      </div>
     </div>;
   }
 }

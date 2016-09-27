@@ -16,7 +16,7 @@ var devDefinePlugin = new webpack.DefinePlugin({
 });
 
 var vendorList = [
-
+  "moment"
 ];
 
 var corePluginList = [
@@ -35,6 +35,7 @@ var corePluginList = [
     { from: path.join(__dirname, "./favicons/"), to: path.join(BUILD_DIR, "./favicons/") },
     { from: path.join(__dirname, "./localizations/"), to: path.join(BUILD_DIR, "./localizations/") },
     { from: path.join(__dirname, "./data/"), to: path.join(BUILD_DIR, "./data/") },
+    { from: path.join(__dirname, "./libraries/"), to: path.join(BUILD_DIR, "./js/") }
     // { from: SETTING_DIR, to: path.join(BUILD_DIR, "./setting/") },
     // { from: path.join(LIBRARIES_DIR, "./chart-core.js"), to: path.join(BUILD_DIR, "./js/chart-core.js") },
     // { from: path.join(LIBRARIES_DIR, "./chart-scatter.js"), to: path.join(BUILD_DIR, "./js/chart-scatter.js") },

@@ -23,6 +23,8 @@
     display: -ms-flexbox;           /* TWEENER - IE 10 */
     display: -webkit-flex;          /* NEW - Chrome */
     display: flex;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    background-color: $white;
+    z-index: 1;
 
     width: $left-menu-width;
     @include respond-to(portrait) {
@@ -30,13 +32,18 @@
       height: calc(100% - #{$header-height});
       position: absolute;
       top: $header-height;
-      left: calc(-100% + #{$left-menu-button-width});
+      left: calc(-100% + #{$left-menu-button-width / 2});
+
+      &.open {
+        width: calc(100% + #{$left-menu-button-width / 2});
+        left: 0;
+      }
     }
 
     > .content {
       width: $left-menu-width;
       @include respond-to(portrait) {
-        width: calc(100% - #{$left-menu-button-width});
+        width: 100%;
       }
       background-color: $white;
       overflow-y: auto;
@@ -55,6 +62,7 @@
 
       @include respond-to(portrait) {
         > .button {
+          border: 1px solid $grey;
           position: relative;
           margin: auto;
           min-width: $left-menu-button-width ;
@@ -64,8 +72,7 @@
           background-color: $white;
           color: $grey;
 
-          border-top-right-radius: 4px;
-          border-bottom-right-radius: 4px;
+          border-radius: 4px;
 
           display: -webkit-box;           /* OLD - iOS 6-, Safari 3.1-6 */
           display: -moz-box;              /* OLD - Firefox 19- (buggy but mostly works) */
@@ -84,14 +91,13 @@
   > .right {
     padding-left: $left-menu-button-width / 2;
     padding-right: 8px;
+    overflow-y: scroll;
 
     -webkit-flex-grow: 1;           /* NEW - Chrome */
             flex-grow: 1;           /* NEW, Spec - Opera 12.1, Firefox 20+ */
     @include respond-to(portrait) {
       width: 100%;
       height: 100%;
-      overflow-y: auto;
-
     }
   }
 }

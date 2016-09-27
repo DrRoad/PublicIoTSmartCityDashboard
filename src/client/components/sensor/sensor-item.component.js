@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 var FontAwesome = require('react-fontawesome');
 
 import store from "./../../store/store";
+import { google10Color } from "./../../utils/color";
 
 require('./sensor-item.component.scss');
 
@@ -22,8 +23,8 @@ export default class SensorItem extends React.Component {
     if (this.props.active) {
       active = {
         color: "#ffffff",
-        backgroundColor: this.props.sensor.color,
-        borderColor: this.props.sensor.color,
+        backgroundColor: google10Color(this.props.sensor.id),
+        borderColor: google10Color(this.props.sensor.id),
       };
     }
     return <div style={active} className="sensor-item" onClick={this.onClick.bind(this)}>
