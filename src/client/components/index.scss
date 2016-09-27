@@ -24,3 +24,16 @@ html, body, #app {
   overflow: hidden;
   font-weight: 400;
 }
+
+/* Scroll bar style */
+::-webkit-scrollbar {
+  width: 4px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(187,168,164,0.3);
+}

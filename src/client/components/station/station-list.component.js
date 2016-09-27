@@ -10,6 +10,7 @@ require('./station-list.component.scss');
 
 @connect((store) => {
   return {
+    station: store.stations.station,
     stations: store.stations.stations,
   }
 })
@@ -18,7 +19,13 @@ export default class StationList extends React.Component {
     this.props.dispatch(fetchStations());
   }
   render() {
-    const stations = this.props.stations.map(station => <StationItem key={station.id} station={station} />);
+    const stations = this.props.stations.map((station) => {
+      let active = false;
+      if (this.props.station.id === station.id) {
+        active = true;
+      }
+      return <StationItem key={station.id} station={station} active={active} />;
+    });
     return <div className="station-list">
       {stations}
     </div>;

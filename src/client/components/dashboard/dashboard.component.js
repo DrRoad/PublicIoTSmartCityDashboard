@@ -4,6 +4,9 @@ var FontAwesome = require('react-fontawesome');
 
 import StationSearch from "./../station/station-search.component";
 import StationList from "./../station/station-list.component";
+import StationInfo from "./../station/station-info.component";
+import SensorSelectList from "./../sensor/sensor-select-list.component";
+import SensorInfoList from "./../sensor/sensor-info-list.component";
 
 require('./dashboard.component.scss');
 
@@ -27,7 +30,11 @@ export default class Dashboard extends React.Component {
           </div>
         </div>
       </div>
-      <div className="right"></div>
+      <div className="right">
+        <StationInfo />
+        <SensorSelectList />
+        <SensorInfoList />
+      </div>
     </div>;
   }
 }

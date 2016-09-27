@@ -7,7 +7,7 @@
   left: 0;
   width: 100%;
   height: $header-height;
-  background-color: $grey-35;
+  background-color: $darkgrey;
 
   display: -webkit-box;           /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;              /* OLD - Firefox 19- (buggy but mostly works) */
@@ -48,7 +48,7 @@
       font-size: $font-medium;
       font-family: $font-normal;
       margin: auto;
-      color: $white-215;
+      color: $white;
     }
   }
 }

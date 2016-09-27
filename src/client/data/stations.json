@@ -6,7 +6,8 @@
       "latitude": 33.7756,
       "longitude": 84.3963
     },
-    "address": "North Avenue 121 NW"
+    "address": "North Avenue 121 NW",
+    "sensors": [1,2,3,4,5,6,7,8]
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
       "latitude": 33.7756,
       "longitude": 84.3963
     },
-    "address": "North Avenue 122 NW"
+    "address": "North Avenue 122 NW",
+    "sensors": [1,3,5,7]
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
       "latitude": 33.7756,
       "longitude": 84.3963
     },
-    "address": "North Avenue 123 NW"
+    "address": "North Avenue 123 NW",
+    "sensors": [2,4,6,8]
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
       "latitude": 33.7756,
       "longitude": 84.3963
     },
-    "address": "North Avenue 124 NW"
+    "address": "North Avenue 124 NW",
+    "sensors": []
   },
   {
     "id": 5,
@@ -42,6 +46,57 @@
       "latitude": 33.7756,
       "longitude": 84.3963
     },
-    "address": "North Avenue 125 NW"
+    "address": "North Avenue 125 NW",
+    "sensors": []
+  },
+  {
+    "id": 6,
+    "name": "Station 6",
+    "coordinate": {
+      "latitude": 33.7756,
+      "longitude": 84.3963
+    },
+    "address": "North Avenue 126 NW",
+    "sensors": []
+  },
+  {
+    "id": 7,
+    "name": "Station 7",
+    "coordinate": {
+      "latitude": 33.7756,
+      "longitude": 84.3963
+    },
+    "address": "North Avenue 127 NW",
+    "sensors": []
+  },
+  {
+    "id": 8,
+    "name": "Station 8",
+    "coordinate": {
+      "latitude": 33.7756,
+      "longitude": 84.3963
+    },
+    "address": "North Avenue 128 NW",
+    "sensors": []
+  },
+  {
+    "id": 9,
+    "name": "Station 9",
+    "coordinate": {
+      "latitude": 33.7756,
+      "longitude": 84.3963
+    },
+    "address": "North Avenue 129 NW",
+    "sensors": []
+  },
+  {
+    "id": 10,
+    "name": "Station 10",
+    "coordinate": {
+      "latitude": 33.7756,
+      "longitude": 84.3963
+    },
+    "address": "North Avenue 130 NW",
+    "sensors": []
   }
 ]

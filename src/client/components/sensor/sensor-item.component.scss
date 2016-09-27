@@ -1,0 +1,19 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixin.scss";
+
+.sensor-item {
+  padding: 4px 8px;
+  margin-right: 8px;
+  cursor: pointer;
+  border: 1px solid $grey;
+  opacity: 0.85;
+
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
+  &:active, &:hover {
+    opacity: 1;
+  }
+}

@@ -3,7 +3,7 @@
 
 .station-search {
   padding: 8px;
-  color: $grey-50;
+  color: $black;
 
   > .search-box {
     display: -webkit-box;           /* OLD - iOS 6-, Safari 3.1-6 */
@@ -28,7 +28,7 @@
     > .fa, label {
       margin-bottom: 0;
       padding: 8px 8px 10px 8px;
-      background-color: $white-255;
+      background-color: $white;
       cursor: pointer;
     }
   }

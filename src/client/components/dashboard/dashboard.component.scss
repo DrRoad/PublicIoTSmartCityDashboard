@@ -38,7 +38,7 @@
       @include respond-to(portrait) {
         width: calc(100% - #{$left-menu-button-width});
       }
-      background-color: $white-235;
+      background-color: $white;
       overflow-y: auto;
     }
 
@@ -61,8 +61,8 @@
           height: $left-menu-button-width * 2;
           left: -1/2 * $left-menu-button-width;
           font-size: $font-large;
-          background-color: $white-235;
-          color: $grey-35;
+          background-color: $white;
+          color: $grey;
 
           border-top-right-radius: 4px;
           border-bottom-right-radius: 4px;
@@ -82,12 +82,16 @@
   }
 
   > .right {
+    padding-left: $left-menu-button-width / 2;
+    padding-right: 8px;
+
     -webkit-flex-grow: 1;           /* NEW - Chrome */
             flex-grow: 1;           /* NEW, Spec - Opera 12.1, Firefox 20+ */
     @include respond-to(portrait) {
       width: 100%;
       height: 100%;
       overflow-y: auto;
+
     }
   }
 }

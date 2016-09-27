@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Temperature",
+    "color": "#e75151"
+  },
+  {
+    "id": 2,
+    "name": "Wind",
+    "color": "#28b779"
+  },
+  {
+    "id": 3,
+    "name": "Humidity",
+    "color": "#27a9e3"
+  },
+  {
+    "id": 4,
+    "name": "Dust",
+    "color": "#ffc468"
+  },
+  {
+    "id": 5,
+    "name": "Noise",
+    "color": "#852b99"
+  },
+  {
+    "id": 6,
+    "name": "Lighting",
+    "color": "#28b779"
+  },
+  {
+    "id": 7,
+    "name": "Twitter",
+    "color": "#27a9e3"
+  },
+  {
+    "id": 8,
+    "name": "StockMarket",
+    "color": "#852b99"
+  }
+]
