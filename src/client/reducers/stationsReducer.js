@@ -46,6 +46,28 @@ export default function reducer(state={
       let station = {...state.station, sensors: sensors};
       return {...state, station: station};
     }
+
+    case "UPDATE_ACTIVE_SENSORS": {
+      if (action.payload.s1 != null) {
+        state.stations.forEach((station) => {
+          if (station.id == 1) {
+            let sensors = [];
+            if (action.payload.s1.p1 && action.payload.s1.p1 == "CLOSED") {
+              sensors.push(1);
+            }
+            if (action.payload.s1.p2 && action.payload.s1.p2 == "CLOSED") {
+              sensors.push(2);
+            }
+            station.sensors = sensors;
+
+            if (state.station.id == station.id) {
+              state.station = {...station};
+            }
+          }
+        });
+      }
+      return {...state};
+    }
   }
   return state;
 };

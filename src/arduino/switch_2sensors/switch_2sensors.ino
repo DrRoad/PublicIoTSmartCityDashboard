@@ -12,16 +12,18 @@ void setup() {
 
 // the loop routine runs over and over again forever:
 void loop() {
+  String result_sensor_1;
   // read the input on analog pin 0:
   int sensorValue = analogRead(A0);
   if (abs(sensorValue - result_1) < errorThreshold) {
-    Serial.println("{\"s1\": \"CLOSED\", \"s2\": \"OPEN\"}");
+    result_sensor_1 = "{\"p1\": \"CLOSED\", \"p2\": \"OPEN\"}";
   } else if (abs(sensorValue - result_2) < errorThreshold) {
-    Serial.println("{\"s1\": \"OPEN\", \"s2\": \"CLOSED\"}");
+    result_sensor_1 = "{\"p1\": \"OPEN\", \"p2\": \"CLOSED\"}";
   } else if (abs(sensorValue - result_1_2) < errorThreshold) {
-    Serial.println("{\"s1\": \"CLOSED\", \"s2\": \"CLOSED\"}");
+    result_sensor_1 = "{\"p1\": \"CLOSED\", \"p2\": \"CLOSED\"}";
   } else {
-    Serial.println("{\"s1\": \"OPEN\", \"s2\": \"OPEN\"}");
+    result_sensor_1 = "{\"p1\": \"OPEN\", \"p2\": \"OPEN\"}";
   }
+  Serial.println("{\"s1\":" + result_sensor_1 + "}");
   delay(5000);        // delay in between reads for stability
 }

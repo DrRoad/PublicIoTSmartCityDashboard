@@ -17,6 +17,14 @@ export default class SensorSelectList extends React.Component {
   componentWillMount() {
     this.props.dispatch(fetchSensors());
   }
+  componentDidMount() {
+    this.connection = new WebSocket('ws://127.0.0.1:1880/ws/sensors');
+    // listen to onmessage event
+    this.connection.onmessage = evt => {
+      // add the new message to state
+      this.props.dispatch({type: "UPDATE_ACTIVE_SENSORS", payload: JSON.parse(evt.data)});
+    };
+  }
   render() {
     const sensors = this.props.sensors.map((sensor) => {
       let active = false;
