@@ -31,6 +31,11 @@ export default class SensorInfo extends React.Component {
       let mousePos = getMousePos(canvas, event);
       this.props.dispatch({type: "SET_MOUSE_POSITION", payload: mousePos});
       }.bind(this), false);
+
+    setTimeout(function() {
+      this.renderGraph(this.props);
+      this.updateGraph(this.props);
+    }.bind(this), 100);
   }
   componentWillReceiveProps(nextProps) {
     if (this.props.updated.valueOf() != nextProps.updated.valueOf() || this.props.record.length != nextProps.record.length) {
@@ -41,7 +46,6 @@ export default class SensorInfo extends React.Component {
   }
   updateGraph(props) {
     this.chart.update(null, props.mouse);
-    // this.chart.chart.draw();
   }
   renderGraph(props) {
     const canvas = ReactDom.findDOMNode(this.refs['canvas']);

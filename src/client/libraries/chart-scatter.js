@@ -1144,7 +1144,7 @@
 				this.scale.draw();
 
 				// Draw axis line for mouse position.
-				if (mousePosition) {
+				if (mousePosition && mousePosition.x != 0) {
 					var ctx = this.chart.ctx;
 					ctx.beginPath();
 					ctx.moveTo(mousePosition.x, 2);

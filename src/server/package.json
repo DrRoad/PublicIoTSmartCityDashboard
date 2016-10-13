@@ -57,12 +57,10 @@
         "xml2js":"0.4.17",
         "node-red-node-feedparser":"0.1.*",
         "node-red-node-email":"0.1.*",
-        "node-red-node-mongodb": "0.0.7",
         "node-red-node-twitter":"0.1.*",
         "node-red-node-rbe":"0.1.*"
     },
     "optionalDependencies": {
-        "node-red-node-serialport":"0.2.*",
         "bcrypt":"0.8.7"
     },
     "devDependencies": {
