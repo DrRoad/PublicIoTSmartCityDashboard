@@ -45,7 +45,9 @@ export default class SensorInfo extends React.Component {
     }
   }
   updateGraph(props) {
-    this.chart.update(null, props.mouse);
+    if (this.chart) {
+      this.chart.update(null, props.mouse);
+    }
   }
   renderGraph(props) {
     const canvas = ReactDom.findDOMNode(this.refs['canvas']);

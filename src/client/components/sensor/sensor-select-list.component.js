@@ -22,6 +22,7 @@ export default class SensorSelectList extends React.Component {
     // listen to onmessage event
     this.connection.onmessage = evt => {
       // add the new message to state
+      console.log(evt);
       this.props.dispatch({type: "UPDATE_ACTIVE_SENSORS", payload: JSON.parse(evt.data)});
     };
   }
